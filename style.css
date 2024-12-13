@@ -1,0 +1,98 @@
+.nav {
+    background: rgb(223, 71, 142);
+    width: 100%;
+    height: 100px;
+    position: sticky; /* dejar un elemento fijo en pantalla*/
+    top: 0;
+    justify-items: center;
+
+}
+.titulo {
+   color: white;
+}
+.wrapper-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200vh;
+}
+
+.box-1{
+    background: red;
+    width: 100%;
+    height: 30%;
+}
+
+.box-2{
+    background: purple;
+    width: 100%;
+    height: 30%;
+}
+
+.box-3{
+    background: black;
+    width: 100%;
+    height: 30%;
+}
+.box-4{
+    display: none;
+}
+
+.image{
+    display: none;
+}
+
+
+@media screen and (min-width: 480px){
+    .wrapper-box{
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .box-2{
+        display: none
+    }
+    .box-3{
+        display: none;
+    }
+    .box-4{
+        display: block;
+        background: green;
+        width: 100%;
+        height: 30%;
+    }
+
+}
+
+@media screen and (min-width: 640px){
+    .wrapper-box{
+        flex-direction: row-reverse;
+    }
+    .box-2{
+        display: block;
+    }
+    .box-3{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    .wrapper-box{
+        flex-direction: column;
+    }
+
+    .box-3{
+        display: none;
+    }
+    .box-4{
+        display: none;
+    }
+
+    .image{
+        display: block;
+        width: 100%;
+        height: 30%;
+        object-fit: cover;
+    }
+}
